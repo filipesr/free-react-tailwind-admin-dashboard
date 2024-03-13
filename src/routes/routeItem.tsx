@@ -7,14 +7,13 @@ interface RouteItemProps {
   index?: boolean
 }
 
-const RouteItem = ({
-  title,
-  url: path,
-  body: Body,
-  index = false
-}: RouteItemProps) => {
+const RouteItem = (
+  { title, url: path, body: Body, index = false }: RouteItemProps,
+  key: number
+) => {
   return (
     <Route
+      key={key}
       path={path}
       element={
         <>

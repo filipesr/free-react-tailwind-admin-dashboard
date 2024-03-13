@@ -7,7 +7,7 @@ export interface LinkItemProps {
   icon: IconType
 }
 
-const LinkItem = ({ title, url, icon: Icon }: LinkItemProps) => {
+const LinkItem = ({ title, url, icon: Icon }: LinkItemProps, key: number) => {
   const location = useLocation()
   const { pathname } = location
 
@@ -16,7 +16,7 @@ const LinkItem = ({ title, url, icon: Icon }: LinkItemProps) => {
     'bg-graydark dark:bg-meta-4'
   }`
   return (
-    <li>
+    <li key={key}>
       <NavLink to={url} className={className}>
         <Icon />
         {title}
