@@ -33,25 +33,25 @@ import RouteItem from './routeItem'
 export const routesForm = [
   {
     title: 'Form Layout',
-    url: '/forms/form-layout',
+    url: '/exemple/forms/form-layout',
     body: FormLayout,
     icon: BsMenuButton
   },
   {
     title: 'Form Elements',
-    url: '/forms/form-elements',
+    url: '/exemple/forms/form-elements',
     body: FormElements,
     icon: BsInputCursorText
   },
   {
     title: 'Alerts',
-    url: '/ui/alerts',
+    url: '/exemple/ui/alerts',
     body: Alerts,
     icon: BsExclamationCircle
   },
   {
     title: 'Buttons',
-    url: '/ui/buttons',
+    url: '/exemple/ui/buttons',
     body: Buttons,
     icon: BsMenuButton
   }
@@ -60,19 +60,19 @@ export const routesForm = [
 export const roustesUser = [
   {
     title: 'Profile',
-    url: '/profile',
+    url: '/exemple/profile',
     body: Profile,
     icon: BsPerson
   },
   {
     title: 'Signin',
-    url: '/auth/signin',
+    url: '/exemple/auth/signin',
     body: SignIn,
     icon: BsBoxArrowInRight
   },
   {
     title: 'Signup',
-    url: '/auth/signup',
+    url: '/exemple/auth/signup',
     body: SignUp,
     icon: BsBoxArrowLeft
   }
@@ -81,31 +81,31 @@ export const roustesUser = [
 export const routesRest = [
   {
     title: 'Dashboard',
-    url: '/',
+    url: '/exemple/',
     body: ECommerce,
     icon: BsFillPieChartFill
   },
   {
     title: 'Basic Chart',
-    url: '/chart',
+    url: '/exemple/chart',
     body: Chart,
     icon: BsGraphDown
   },
   {
     title: 'Calendar',
-    url: '/calendar',
+    url: '/exemple/calendar',
     body: Calendar,
     icon: BsCalendarRange
   },
   {
     title: 'Tables',
-    url: '/tables',
+    url: '/exemple/tables',
     body: Tables,
     icon: BsTable
   },
   {
     title: 'Settings',
-    url: '/settings',
+    url: '/exemple/settings',
     body: Settings,
     icon: BsTools
   }
@@ -114,7 +114,7 @@ export const routesRest = [
 export const routesApp = [
   {
     title: 'CRUD',
-    url: '/forms/form-elements',
+    url: '/exemple/forms/form-elements',
     body: FormElements,
     icon: BsInputCursorText
   }
