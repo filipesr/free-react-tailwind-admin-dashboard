@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-import Breadcrumb from '../../components/Breadcrumbs/Breadcrumb';
-import DefaultLayout from '../../layout/DefaultLayout';
+import Breadcrumb from '@/components/Breadcrumbs/Breadcrumb'
+import DefaultLayout from '@/layout/DefaultLayout'
 
 const Buttons = () => {
   return (
@@ -466,7 +466,7 @@ const Buttons = () => {
         </div>
       </div>
     </DefaultLayout>
-  );
-};
+  )
+}
 
-export default Buttons;
+export default Buttons

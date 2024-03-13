@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
-import DropdownMessage from './DropdownMessage';
-import DropdownNotification from './DropdownNotification';
-import DropdownUser from './DropdownUser';
-import LogoIcon from '../../images/logo/logo-icon.svg';
-import DarkModeSwitcher from './DarkModeSwitcher';
+import { Link } from 'react-router-dom'
+import DropdownMessage from './DropdownMessage'
+import DropdownNotification from './DropdownNotification'
+import DropdownUser from './DropdownUser'
+import LogoIcon from '@/images/logo/logo-icon.svg'
+import DarkModeSwitcher from './DarkModeSwitcher'
 
 const Header = (props: {
-  sidebarOpen: string | boolean | undefined;
-  setSidebarOpen: (arg0: boolean) => void;
+  sidebarOpen: string | boolean | undefined
+  setSidebarOpen: (arg0: boolean) => void
 }) => {
   return (
     <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
@@ -17,8 +17,8 @@ const Header = (props: {
           <button
             aria-controls="sidebar"
             onClick={(e) => {
-              e.stopPropagation();
-              props.setSidebarOpen(!props.sidebarOpen);
+              e.stopPropagation()
+              props.setSidebarOpen(!props.sidebarOpen)
             }}
             className="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
           >
@@ -118,7 +118,7 @@ const Header = (props: {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

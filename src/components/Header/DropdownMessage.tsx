@@ -1,51 +1,51 @@
-import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import UserOne from '../../images/user/user-01.png';
-import UserTwo from '../../images/user/user-02.png';
-import UserThree from '../../images/user/user-03.png';
-import UserFour from '../../images/user/user-04.png';
+import UserOne from '@/images/user/user-01.png'
+import UserTwo from '@/images/user/user-02.png'
+import UserThree from '@/images/user/user-03.png'
+import UserFour from '@/images/user/user-04.png'
 
 const DropdownMessage = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [notifying, setNotifying] = useState(true);
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [notifying, setNotifying] = useState(true)
 
-  const trigger = useRef<any>(null);
-  const dropdown = useRef<any>(null);
+  const trigger = useRef<any>(null)
+  const dropdown = useRef<any>(null)
 
   // close on click outside
   useEffect(() => {
     const clickHandler = ({ target }: MouseEvent) => {
-      if (!dropdown.current) return;
+      if (!dropdown.current) return
       if (
         !dropdownOpen ||
         dropdown.current.contains(target) ||
         trigger.current.contains(target)
       )
-        return;
-      setDropdownOpen(false);
-    };
-    document.addEventListener('click', clickHandler);
-    return () => document.removeEventListener('click', clickHandler);
-  });
+        return
+      setDropdownOpen(false)
+    }
+    document.addEventListener('click', clickHandler)
+    return () => document.removeEventListener('click', clickHandler)
+  })
 
   // close if the esc key is pressed
   useEffect(() => {
     const keyHandler = ({ keyCode }: KeyboardEvent) => {
-      if (!dropdownOpen || keyCode !== 27) return;
-      setDropdownOpen(false);
-    };
-    document.addEventListener('keydown', keyHandler);
-    return () => document.removeEventListener('keydown', keyHandler);
-  });
+      if (!dropdownOpen || keyCode !== 27) return
+      setDropdownOpen(false)
+    }
+    document.addEventListener('keydown', keyHandler)
+    return () => document.removeEventListener('keydown', keyHandler)
+  })
 
   return (
     <li className="relative">
       <Link
         ref={trigger}
         onClick={() => {
-          setNotifying(false);
-          setDropdownOpen(!dropdownOpen);
+          setNotifying(false)
+          setDropdownOpen(!dropdownOpen)
         }}
         className="relative flex h-8.5 w-8.5 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary dark:border-strokedark dark:bg-meta-4 dark:text-white"
         to="#"
@@ -193,7 +193,7 @@ const DropdownMessage = () => {
       </div>
       {/* <!-- Dropdown End --> */}
     </li>
-  );
-};
+  )
+}
 
-export default DropdownMessage;
+export default DropdownMessage
