@@ -64,55 +64,57 @@ const TableRow = ({
   }
 
   return (
-    <div
-      className={`grid grid-cols-7 border-t border-stroke py-4.5 px-4 dark:border-strokedark sm:grid-cols-9 md:px-6 2xl:px-7.5 ${deleted ? 'opacity-0 hidden' : 'opacity-100 visible'} transition-all duration-500`}
-    >
+    <>
       <TableEditRow
         product={product}
         setConfirm={handleSaveConfirm}
         show={editing}
       />
-      <TableDeleteRow
-        product={product}
-        setConfirm={handleDeleteConfirm}
-        show={deleting}
-      />
-      <div className="col-span-3 flex items-center">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <div className="h-12.5 w-15 rounded-md">
-            <img src={image} alt="Product" />
+      <div
+        className={`grid grid-cols-7 border-t border-stroke py-4.5 px-4 dark:border-strokedark sm:grid-cols-9 md:px-6 2xl:px-7.5 ${deleted ? 'opacity-0 hidden' : 'opacity-100 visible'} transition-all duration-500 relative`}
+      >
+        <TableDeleteRow
+          product={product}
+          setConfirm={handleDeleteConfirm}
+          show={deleting}
+        />
+        <div className="col-span-3 flex items-center">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="h-12.5 w-15 rounded-md">
+              <img src={image} alt="Product" />
+            </div>
+            <p className="text-sm text-black dark:text-white">{name}</p>
           </div>
-          <p className="text-sm text-black dark:text-white">{name}</p>
         </div>
-      </div>
-      <div className="col-span-2 hidden items-center sm:flex">
-        <p className="text-sm text-black dark:text-white">{category}</p>
-      </div>
-      <div className="col-span-1 flex items-center">
-        <p className="text-sm text-black dark:text-white">${price}</p>
-      </div>
-      <div className="col-span-1 flex items-center">
-        <p className="text-sm text-black dark:text-white">{sold}</p>
-      </div>
-      <div className="col-span-1 flex items-center">
-        <p className="text-sm text-meta-3">${profit}</p>
-      </div>
-      <div className="col-span-1 flex items-center">
-        <div className="flex items-center space-x-3.5 w-full justify-center">
-          <button onClick={handleView} className="">
-            <BsEye />
-          </button>
-          {canEdit && (
-            <button onClick={handleEdit} className="">
-              <BsPencil />
+        <div className="col-span-2 hidden items-center sm:flex">
+          <p className="text-sm text-black dark:text-white">{category}</p>
+        </div>
+        <div className="col-span-1 flex items-center">
+          <p className="text-sm text-black dark:text-white">${price}</p>
+        </div>
+        <div className="col-span-1 flex items-center">
+          <p className="text-sm text-black dark:text-white">{sold}</p>
+        </div>
+        <div className="col-span-1 flex items-center">
+          <p className="text-sm text-meta-3">${profit}</p>
+        </div>
+        <div className="col-span-1 flex items-center">
+          <div className="flex items-center space-x-3.5 w-full justify-center">
+            <button onClick={handleView} className="">
+              <BsEye />
             </button>
-          )}
-          {canDelete && (
-            <ButtonRowDelete product={product} rowDelete={handleDelete} />
-          )}
+            {canEdit && (
+              <button onClick={handleEdit} className="">
+                <BsPencil />
+              </button>
+            )}
+            {canDelete && (
+              <ButtonRowDelete product={product} rowDelete={handleDelete} />
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
