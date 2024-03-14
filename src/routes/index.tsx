@@ -29,8 +29,15 @@ import {
 } from 'react-icons/bs'
 
 import RouteItem from './routeItem'
+import Products from '@/pages/_examples/Crud'
 
 export const routesForm = [
+  {
+    title: 'CRUD',
+    url: '/exemple/crud',
+    body: Products,
+    icon: BsInputCursorText
+  },
   {
     title: 'Form Layout',
     url: '/exemple/forms/form-layout',
@@ -114,12 +121,17 @@ export const routesRest = [
 export const routesApp = [
   {
     title: 'CRUD',
-    url: '/exemple/forms/form-elements',
-    body: FormElements,
+    url: '/table',
+    body: Products,
     icon: BsInputCursorText
   }
 ]
-export const routes = [...roustesUser, ...routesForm, ...routesRest]
+export const routes = [
+  ...roustesUser,
+  ...routesForm,
+  ...routesRest,
+  ...routesApp
+]
 
 function MainRoutes() {
   return (
