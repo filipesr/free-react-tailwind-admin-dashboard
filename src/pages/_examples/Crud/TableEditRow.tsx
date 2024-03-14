@@ -17,12 +17,14 @@ const TableEditRow = ({
   }
   return (
     <div
-      className={`flex items-center justify-center w-full h-full bg-boxdark bg-opacity-95 top-0 left-0 absolute  ${!show ? 'opacity-0 z-[-10]' : 'opacity-100 z-999'} transition-all duration-500 ease-in-out`}
+      className={`flex items-center justify-center w-full h-full bg-white shadow-default dark:border-strokedark dark:bg-boxdark bg-opacity-95 top-0 left-0 absolute  ${!show ? 'opacity-0 z-[-10]' : 'opacity-100 z-999'} transition-all duration-500 ease-in-out`}
     >
       {/* {divCancel()} */}
       <div className="w-fit flex-col ">
         {/* {divCancel()} */}
-        <div className={` rounded-sm border border-stroke bg-black `}>
+        <div
+          className={` rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark `}
+        >
           <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark relative">
             <h3 className="font-medium text-black dark:text-white">
               Contact Form
