@@ -17,13 +17,13 @@ const TableEditRow = ({
   }
   return (
     <div
-      className={`flex items-center justify-center w-full h-full border bg-white shadow-default  dark:bg-boxdark bg-opacity-95 top-0 left-0 absolute  ${!show ? 'opacity-0 z-[-10]' : 'opacity-100 z-99'} transition-all duration-500 ease-in-out`}
+      className={`flex items-center justify-center border bg-white shadow-default  dark:bg-boxdark bg-opacity-95 top-[80px] bottom-0 left-0 right-0 absolute  ${!show ? 'opacity-0 z-[-10]' : 'opacity-100 z-99'} transition-all duration-500 ease-in-out overflow-y-auto`}
     >
       {/* {divCancel()} */}
-      <div className="w-fit flex-col ">
+      <div className="w-fit flex-col bg-yellow-300 top:max(50px, 10%)">
         {/* {divCancel()} */}
         <div
-          className={` rounded-sm border border-stroke bg-white shadow-default  dark:bg-boxdark `}
+          className={` rounded-sm border border-stroke bg-white shadow-default  dark:bg-boxdark`}
         >
           <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark relative">
             <h3 className="font-medium text-black dark:text-white">
@@ -36,9 +36,9 @@ const TableEditRow = ({
               <BsX size={24} />
             </div>
           </div>
-          <form action="#">
+          <form>
             <div className="p-6.5">
-              <div className="mb-4.5 flex flex-col gap-6 xl:flex-row ">
+              <div className="mb-4.5 flex flex-col gap-6 sm:flex-row ">
                 <div className="w-full xl:w-1/2">
                   <label className="mb-2.5 block text-black dark:text-white">
                     First name
