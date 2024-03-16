@@ -50,7 +50,7 @@ const TableRow = ({
     // return rowEdit(product)
   }
   const handleSaveConfirm = (value: boolean) => {
-    log('rowSaveConfirm')
+    log(`rowSaveConfirm -> ${value}`)
     setAction(value && rowEdit(product) ? eAction.SAVED : eAction.LIST)
     return rowEdit(product)
   }
